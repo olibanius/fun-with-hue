@@ -58,7 +58,7 @@ if (isset($argv[3])) {
 // If kl 8, bri: 0, transitiontime 10*60*60 (1h)
 // If kl 9, stäng av
 
-if ($hour == 15) {
+if ($hour == 23) {
     $onOffStr = '"on":true,';
     $briStr = '"bri":150,';
     $transitionTime = $oneHour;
@@ -66,11 +66,11 @@ if ($hour == 15) {
     $onOffStr = '';
     $briStr = '';
     $transitionTime = $oneHour;
-} elseif ($hour == 8) {
+} elseif ($hour == 6) {
     $onOffStr = '';
     $briStr = '"bri":0,';
     $transitionTime = $oneHour;
-} elseif ($hour == 9) {
+} elseif ($hour == 7) {
     $onOffStr = '"on":false,';
     $briStr = '';
     $transitionTime = 0;
