@@ -3,12 +3,12 @@
 if (!(is_file(getcwd().'/settings.txt'))) die('settings.txt does not exist');
 $ini = parse_ini_file(getcwd().'/settings.txt');
 
-$bri = rand(1,255);
+$bri = rand(150,255);
 $sat = rand(1,255);
-$hue = rand(1,255);
+$hue = rand(1,65280);
 $json = '{"on":true,"bri":'.$bri.',"sat":'.$sat.',"hue":'.$hue.'}';
 $json = str_replace('"', '\"', $json);
-$uri = $ini['hue_uri2'];
+$uri = $ini['hue_uri'];
 
 try {
   ob_start();
